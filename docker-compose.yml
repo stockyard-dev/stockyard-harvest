@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  harvest:
+    build: .
+    ports:
+      - "9810:9810"
+    volumes:
+      - harvest_data:/data
+    environment:
+      - PORT=9810
+volumes:
+  harvest_data:

@@ -48,7 +48,7 @@ func main() {
 	}
 	defer db.Close()
 
-	srv := server.New(db, server.DefaultLimits())
+	srv := server.New(db, server.DefaultLimits(), dataDir)
 
 	fmt.Printf("\n  Harvest v%s — Self-hosted harvest and crop tracking for farms\n  Dashboard:  http://localhost:%s/ui\n  API:        http://localhost:%s/api\n  Data:       %s\n  Questions? hello@stockyard.dev — I read every message\n\n", version, port, port, dataDir)
 	log.Printf("harvest: listening on :%s", port)
